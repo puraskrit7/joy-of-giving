@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/joy-of-giving/static/css/main.cd2ec0be.css",
-    "main.js": "/joy-of-giving/static/js/main.30292a30.js",
+    "main.js": "/joy-of-giving/static/js/main.e4c1544e.js",
     "static/js/453.de9f4cd2.chunk.js": "/joy-of-giving/static/js/453.de9f4cd2.chunk.js",
+    "static/media/unicef_video.mp4": "/joy-of-giving/static/media/unicef_video.c8d7b751065bcf871bac.mp4",
     "static/media/child2.png": "/joy-of-giving/static/media/child2.407f12bf2adef1fad35b.png",
     "static/media/child4.png": "/joy-of-giving/static/media/child4.85b5d640434dc51f81c4.png",
     "static/media/slider4.png": "/joy-of-giving/static/media/slider4.408325b18022faacf26d.png",
@@ -27,11 +28,11 @@
     "static/media/slick.woff": "/joy-of-giving/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/joy-of-giving/index.html",
     "main.cd2ec0be.css.map": "/joy-of-giving/static/css/main.cd2ec0be.css.map",
-    "main.30292a30.js.map": "/joy-of-giving/static/js/main.30292a30.js.map",
+    "main.e4c1544e.js.map": "/joy-of-giving/static/js/main.e4c1544e.js.map",
     "453.de9f4cd2.chunk.js.map": "/joy-of-giving/static/js/453.de9f4cd2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cd2ec0be.css",
-    "static/js/main.30292a30.js"
+    "static/js/main.e4c1544e.js"
   ]
 }
