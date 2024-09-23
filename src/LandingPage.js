@@ -25,7 +25,7 @@ import secondHeader from "./assets/secondHeader.png";
 import thirdHeader from "./assets/thirdHeader.png";
 import fourthHeader from "./assets/fourthHeader.png";
 import fifthHeader from "./assets/fifthHeader.png";
-// import unicef_video from "./assets/unicef_video.mp4";
+import unicef_video from "./assets/unicef_video.mp4";
 import unicefLogo from "./assets/unicefLogo.png";
 
 const LandingPage = () => {
@@ -39,10 +39,10 @@ const LandingPage = () => {
     setPopupOpen(true);
   };
 
-  // const closeVideoPopup = () => {
-  //   setPopupOpen(false);
-  //   videoRef.current.pause();
-  // };
+  const closeVideoPopup = () => {
+    setPopupOpen(false);
+    videoRef.current.pause();
+  };
 
   const handleDonationAmountChange = (amount) => {
     setDonationAmount(amount);
@@ -236,7 +236,7 @@ const LandingPage = () => {
           </div>
         </div>
 
-        {/* {isPopupOpen && (
+        {isPopupOpen && (
           <div className={`video-popup ${isPopupOpen ? "active" : ""}`}>
             <span className="close" onClick={closeVideoPopup}>
               &times;
@@ -246,7 +246,7 @@ const LandingPage = () => {
               Your browser does not support the video tag.
             </video>
           </div>
-        )} */}
+        )}
       </div>
 
       <div className="video-second-section">
