@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/joy-of-giving/static/css/main.cd2ec0be.css",
+    "main.js": "/joy-of-giving/static/js/main.30292a30.js",
+    "static/js/453.de9f4cd2.chunk.js": "/joy-of-giving/static/js/453.de9f4cd2.chunk.js",
+    "static/media/child2.png": "/joy-of-giving/static/media/child2.407f12bf2adef1fad35b.png",
+    "static/media/child4.png": "/joy-of-giving/static/media/child4.85b5d640434dc51f81c4.png",
+    "static/media/slider4.png": "/joy-of-giving/static/media/slider4.408325b18022faacf26d.png",
+    "static/media/slider2.png": "/joy-of-giving/static/media/slider2.1f56f0ae6ce30da5329b.png",
+    "static/media/banner1.png": "/joy-of-giving/static/media/banner1.b78711c2c40b22ceae8f.png",
+    "static/media/slider3.png": "/joy-of-giving/static/media/slider3.a22492e0a1961a60e505.png",
+    "static/media/banner2.png": "/joy-of-giving/static/media/banner2.5699182988cb7503f3cd.png",
+    "static/media/banner3.png": "/joy-of-giving/static/media/banner3.de93d36ffa5c4514071e.png",
+    "static/media/banner4.png": "/joy-of-giving/static/media/banner4.fb257b699777736bc4e1.png",
+    "static/media/slider1.png": "/joy-of-giving/static/media/slider1.0b123673a0564c4cce5a.png",
+    "static/media/child1.png": "/joy-of-giving/static/media/child1.09023e18a7957ce5cc33.png",
+    "static/media/child3.png": "/joy-of-giving/static/media/child3.a7b647bcc76d80937c7c.png",
+    "static/media/thirdHeader.png": "/joy-of-giving/static/media/thirdHeader.73f32c2ea612b359e2d0.png",
+    "static/media/firstHeader.png": "/joy-of-giving/static/media/firstHeader.81fcfd18fe7f3316914f.png",
+    "static/media/secondHeader.png": "/joy-of-giving/static/media/secondHeader.55674cecdbcba25945d5.png",
+    "static/media/fourthHeader.png": "/joy-of-giving/static/media/fourthHeader.e1eae8a052dc45fcac09.png",
+    "static/media/unicefLogo.png": "/joy-of-giving/static/media/unicefLogo.0eceed6f915ba91c5a95.png",
+    "static/media/fifthHeader.png": "/joy-of-giving/static/media/fifthHeader.9d0641b4fef373769028.png",
+    "static/media/slick.svg": "/joy-of-giving/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/joy-of-giving/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/joy-of-giving/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/joy-of-giving/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/joy-of-giving/index.html",
+    "main.cd2ec0be.css.map": "/joy-of-giving/static/css/main.cd2ec0be.css.map",
+    "main.30292a30.js.map": "/joy-of-giving/static/js/main.30292a30.js.map",
+    "453.de9f4cd2.chunk.js.map": "/joy-of-giving/static/js/453.de9f4cd2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd2ec0be.css",
+    "static/js/main.30292a30.js"
+  ]
+}
