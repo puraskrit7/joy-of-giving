@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom";
+
 import "./LandingPage.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -34,6 +36,7 @@ const LandingPage = () => {
   const [paymentMode, setPaymentMode] = useState("bank");
   const [isPopupOpen, setPopupOpen] = useState(false);
   const videoRef = useRef(null);
+  const navigate = useNavigate();
 
   const openVideoPopup = () => {
     setPopupOpen(true);
@@ -54,6 +57,10 @@ const LandingPage = () => {
 
   const handlePaymentModeChange = (mode) => {
     setPaymentMode(mode);
+  };
+
+  const handleNextClick = () => {
+    navigate("/next-page", { state: { amount: donationAmount } });
   };
 
   const sliderSettings = {
@@ -104,7 +111,6 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
-     
       <header className="header">
         <div align="right">
           <img src={unicefLogo} alt="UNICEF Logo" width="300" />
@@ -112,104 +118,105 @@ const LandingPage = () => {
       </header>
       <section className="donation-section">
         <div className="donation-container">
-            <form className="donation-form">
-              <div className="donation-flex-image">
-                <img src={firstHeader} alt="Donate for children" />
+          <form className="donation-form">
+            <div className="donation-flex-image">
+              <img src={firstHeader} alt="Donate for children" />
+            </div>
+            <div className="donation-type-container">
+              <div className="donation-type">
+                <button
+                  type="button"
+                  className={`donation-btn-tab ${
+                    donationType === "monthly" ? "active" : ""
+                  }`}
+                  onClick={() => handleDonationTypeChange("monthly")}
+                >
+                  Give Monthly
+                </button>
+                <button
+                  type="button"
+                  className={`donation-btn-tab ${
+                    donationType === "once" ? "active" : ""
+                  }`}
+                  onClick={() => handleDonationTypeChange("once")}
+                >
+                  Give Once
+                </button>
               </div>
-              <div className="donation-type-container">
-                <div className="donation-type">
-                  <button
-                    type="button"
-                    className={`donation-btn-tab ${
-                      donationType === "monthly" ? "active" : ""
-                    }`}
-                    onClick={() => handleDonationTypeChange("monthly")}
-                  >
-                    Give Monthly
-                  </button>
-                  <button
-                    type="button"
-                    className={`donation-btn-tab ${
-                      donationType === "once" ? "active" : ""
-                    }`}
-                    onClick={() => handleDonationTypeChange("once")}
-                  >
-                    Give Once
-                  </button>
-                </div>
 
-                <div className="donation-amount">
-                  <button
-                    type="button"
-                    className={donationAmount === 800 ? "active" : ""}
-                    onClick={() => handleDonationAmountChange(800)}
-                  >
-                    ₹800
-                  </button>
-                  <button
-                    type="button"
-                    className={donationAmount === 1000 ? "active" : ""}
-                    onClick={() => handleDonationAmountChange(1000)}
-                  >
-                    ₹1000
-                  </button>
-                  <button
-                    type="button"
-                    className={donationAmount === 1500 ? "active" : ""}
-                    onClick={() => handleDonationAmountChange(1500)}
-                  >
-                    ₹1500
-                  </button>
-                  <button
-                    type="button"
-                    className={donationAmount === "other" ? "active" : ""}
-                    onClick={() => handleDonationAmountChange("other")}
-                  >
-                    OTHER
-                  </button>
-                </div>
+              <div className="donation-amount">
+                <button
+                  type="button"
+                  className={donationAmount === 800 ? "active" : ""}
+                  onClick={() => handleDonationAmountChange(800)}
+                >
+                  ₹800
+                </button>
+                <button
+                  type="button"
+                  className={donationAmount === 1000 ? "active" : ""}
+                  onClick={() => handleDonationAmountChange(1000)}
+                >
+                  ₹1000
+                </button>
+                <button
+                  type="button"
+                  className={donationAmount === 1500 ? "active" : ""}
+                  onClick={() => handleDonationAmountChange(1500)}
+                >
+                  ₹1500
+                </button>
+                <button
+                  type="button"
+                  className={donationAmount === "other" ? "active" : ""}
+                  onClick={() => handleDonationAmountChange("other")}
+                >
+                  OTHER
+                </button>
+              </div>
 
-                <div className="selected-amount">
-                  <h2>
-                    ₹ {donationAmount}{" "}
-                    {donationType === "monthly" ? "PER MONTH" : ""}
-                  </h2>
-                </div>
+              <div className="selected-amount">
+                <h2>
+                  ₹ {donationAmount}{" "}
+                  {donationType === "monthly" ? "PER MONTH" : ""}
+                </h2>
+              </div>
 
-                {donationType === "monthly" && (
-                  <div className="payment-mode">
-                    <h4>Mode of donation</h4>
-                    <div className="payment-mode-radio">
-                      <label>
-                        <input
-                          type="radio"
-                          name="payment"
-                          value="bank"
-                          checked={paymentMode === "bank"}
-                          onChange={() => handlePaymentModeChange("bank")}
-                        />
-                        Bank Account
-                      </label>
-                      <label>
-                        <input
-                          type="radio"
-                          name="payment"
-                          value="upi"
-                          checked={paymentMode === "upi"}
-                          onChange={() => handlePaymentModeChange("upi")}
-                        />
-                        UPI
-                      </label>
-                    </div>
+              {donationType === "monthly" && (
+                <div className="payment-mode">
+                  <h4>Mode of donation</h4>
+                  <div className="payment-mode-radio">
+                    <label>
+                      <input
+                        type="radio"
+                        name="payment"
+                        value="bank"
+                        checked={paymentMode === "bank"}
+                        onChange={() => handlePaymentModeChange("bank")}
+                      />
+                      Bank Account
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="payment"
+                        value="upi"
+                        checked={paymentMode === "upi"}
+                        onChange={() => handlePaymentModeChange("upi")}
+                      />
+                      UPI
+                    </label>
                   </div>
-                )}
-
-                <button className="next-button">NEXT</button>
-              </div>
-            </form>
+                </div>
+              )}
+              <button className="next-button" onClick={handleNextClick}>
+                NEXT
+              </button>
+            </div>
+          </form>
           <div className="donation-flex-image">
             <div className="donation-image">
-              <img src={child1} alt="Donate for children"/>
+              <img src={child1} alt="Donate for children" />
             </div>
           </div>
         </div>
